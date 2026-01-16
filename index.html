@@ -52,7 +52,7 @@
                         <img src="https://salve.icmbio.gov.br/img/logo-salve.svg" alt="Logo SALVE" class="w-20">
                     </div>
                     <div>
-                        <h1 class="font-playfair font-bold text-xl text-gray-800">Sistema de Avaliação do Risco de Extinção da Biodiversidade</h1>
+                        <h1 class="font-playfair font-bold text-sm md:text-xl text-gray-800">Sistema de Avaliação do Risco de Extinção da Biodiversidade</h1>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -94,12 +94,12 @@
                             </span>
                         </h1>
 
-                        <p class="text-xl text-gray-600 leading-relaxed">
+                        <p class="text-base md:text-xl text-gray-600 leading-relaxed break-words">
                             <b>Autoria:</b>
                             <br>
                             Michela Borges; Anne Isabelley Gondim de Farias; Carlos Renato Rezende Ventura; Jéssica Prata de Oliveira; Luciana Ribeiro Martins; Luiz Fernando Netto; Mariana de Vasconcelos Contins Gonçalves; Maristela de Lima Bueno; Renata Aparecida dos Santos Alitto; Walter Ramos Pinto Cerqueira; Yara Aparecida Garcia Tavares
                         </p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
+                        <p class="text-sm text-gray-600 leading-relaxed break-words">
                             <b>Como citar:</b>
                             <br>
                             Borges, M.; Farias, A.I.G.; Ventura, C.R.R.; Oliveira, J.P.; Martins, L.R.; Netto, L.F.; Gonçalves, M.V.C.; Bueno, M.L.; Alitto, R.A.S.; Cerqueira, W.R.P.; Tavares, Y.A.G. 2024. Echinaster brasiliensis. Sistema de Avaliação do Risco de Extinção da Biodiversidade - SALVE - Instituto Chico Mendes de Conservação da Biodiversidade - ICMBio. Disponível em: https://salve.icmbio.gov.br Digital Object Identifier (DOI): https://doi.org/10.37002/salve.ficha.21372.2 - Acesso em: 15 de jan. de 2026.
@@ -110,7 +110,7 @@
                             class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 text-lg rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 inline-flex items-center justify-center">
                             <i class="fas fa-file-pdf mr-2"></i> Baixar DOI PDF</a>
                     </div>
-                    <div class="flex items-center space-x-8 pt-4">
+                    <div class="flex flex-wrap gap-6 pt-4 justify-center md:justify-start">
                         <div class="text-center">
                             <div class="text-sm text-gray-600">Categoria</div>
                             <div class="text-2xl font-bold text-green-600">Menos Preocupante (LC)</div>
@@ -179,12 +179,31 @@
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-400 text-sm">
-                    © 2026 ICMBio, 2026. Sistema de Avaliação do Risco de Extinção da Biodiversidade – SALVE.
+                    © 2026 ICMBio. Sistema de Avaliação do Risco de Extinção da Biodiversidade – SALVE.
                 </p>
             </div>
         </div>
     </footer>
-    <script src="assets/js/script.js"></script>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Elementos
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
 
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
